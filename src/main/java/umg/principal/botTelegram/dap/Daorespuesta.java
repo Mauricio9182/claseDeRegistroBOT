@@ -1,14 +1,15 @@
 package umg.principal.botTelegram.dap;
 
-import org.umg.principal.botTelegram.db.DatabaseConnection;
-import org.umg.principal.BotTelegram.model.User;
+import umg.principal.botTelegram.db.DatabaseConnection;
+import umg.principal.botTelegram.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDaorespuesta {
+
+public class Daorespuesta {
     public void updateUserrespuesta(User user) throws SQLException {
         String query = "UPDATE tb_respuesta SET carne = ?, nombre = ?, correo = ?, seccion = ?, telegramid = ?, activo = ? WHERE idusuario = ?";
         try (Connection connection = DatabaseConnection.getConnection();
